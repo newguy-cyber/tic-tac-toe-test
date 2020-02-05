@@ -1,7 +1,14 @@
 /*------Constants------*/
-
-
-
+const winningCombos = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,4,8],
+    [2,4,6],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+];
 /*------Variables (state)------*/
 
 // Variables might include (board/turn/winner)
@@ -11,11 +18,18 @@
 // You might choose to put your game status here
 
 /*------Event Listeners------*/
+const enablelistners = (){
+    
+}
 
 // This is where you should put the event listener
 // for a mouse-click
 
 /*------Functions------*/
+
+function init(){
+
+}
 
 
 // Some functions you might choose to use:
