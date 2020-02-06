@@ -1,15 +1,9 @@
 /*------Constants------*/
-const winningCombos = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,4,8],
-    [2,4,6],
-    [0,3,6],
-    [1,4,7],
-    [2,5,8],
-];
+
 /*------Variables (state)------*/
+let playerOne = 1;
+let board;
+let winner;
 
 // Variables might include (board/turn/winner)
 
@@ -18,20 +12,36 @@ const winningCombos = [
 // You might choose to put your game status here
 
 /*------Event Listeners------*/
-const enablelistners = (){
-    
-}
-
+document.querySelector('.board').addEventListener('click', mouse)
 // This is where you should put the event listener
 // for a mouse-click
 
 /*------Functions------*/
+function mouse(evt) {
+    let square = document.getElementById(evt.target.id)
+console.log(square);
+let id = (evt.target.id);
+id = parseInt(id[2]);
+board[id] = 4;
+console.log(board);
+//if..else statement blow
+if (playerOne === 1) {
+    square.innerHTML = 'A';
+    playerOne = -1;
 
-function init(){
-
+} else{
+    square.innerHTML = 'B';
+    playerOne = 1;
+} 
 }
 
+function init(){
+    board = [null, null, null, null, null, null, null, null, null];
+    turn = 1;
+    winner = null;
 
+}
+init();
 // Some functions you might choose to use:
 
 // Initialization function:
@@ -53,3 +63,6 @@ function init(){
 // Displays the current state of the board
 // on the page, updating the elements to reflect
 // either X or O depending on whose turn it is
+var confettiSettings = { target: 'my-canvas' };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();

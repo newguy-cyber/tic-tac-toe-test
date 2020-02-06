@@ -3,6 +3,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: coral;
 }
 
 section.board {
@@ -17,4 +18,5 @@ div {
     font-size: 8vmin;
     text-align: center;
     vertical-align: middle;
+    background-color:blue;
 }
